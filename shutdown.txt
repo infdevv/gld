@@ -1,3 +1,2 @@
-1
-Test
-
+0
+If you are seeing this. There was a error in detecting a shutdown. There is no shutdown as of now
